@@ -1,0 +1,300 @@
+/* importing link from google fonts for 'Work Sans' font. */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* grid-container style */
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+          'header'
+          'main'
+          'footer';
+}
+
+/* header style */
+header{
+    grid-area: header;
+    padding:1rem 0 1.8rem;
+    background-color: #FFF4E7;
+}
+
+/* header -> nav style */
+header nav{
+    width: 85%;
+    margin:0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-list{
+    display: flex;
+}
+
+nav h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.nav-list a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right:4rem;
+    line-height: 3;
+    color: #454545;
+}
+
+.nav-list .login{
+    margin-right: 0;
+}
+
+/* header -> content-box style */
+.content-box{
+    width: 85%;
+    margin:7rem auto 0;
+}
+
+.content-box img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner{ 
+    text-align: center;
+}
+
+.banner h1{
+    width: 40%;
+    margin: 0 auto;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.banner p{
+    width: 70%;
+    margin:1rem auto;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.button-class{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 1.2rem 1.4rem;
+    background-color: #FF900E;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    margin: 2.5rem 0 3.5rem;
+}
+
+/* main style */
+main{
+    grid-area: main;
+    margin:4rem 0 0 0;
+}
+
+/* main -> quick-list style */
+.quick-list{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+}
+
+.img-grid{
+    width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+.img-grid img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.quick-list-features{
+   width: 45%;
+   flex-grow: 1;
+}
+
+.quick-list-features h1{
+    font-size:3rem;
+    font-weight:700;
+    color:#A4A4A4;
+}
+
+.special-black{
+    color:black;
+}
+
+.special-orange{
+    color:#FF900E;
+    margin-left: 0.5rem;
+}
+
+.quick-list-features p{
+    margin: 2rem 0 1rem;
+    line-height: 1.5;
+}
+
+/* main -> features-you-enjoy style */
+.features-you-enjoy{
+    width: 88%;
+    margin:8rem auto 5rem;
+}
+
+.feature-container{
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    gap:4rem;
+}
+
+.love-and-enjoy{
+    margin: 3rem 0 0 0;
+    width: 45%;
+    flex-grow: 0.5;
+}
+
+.architect-image{
+    flex-grow: 0.5;
+}
+
+.architect-image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* .overlay-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.year-experience{
+    width: 15%;
+    font-size: 2rem;
+    margin-top: -6rem;
+    z-index: 2;
+}
+
+.experience{
+    font-size: 0.9rem;
+} */
+
+.love-and-enjoy h1{
+    font-size: 3rem;
+    padding: 0 0 0 2rem;
+    border-left: 8px solid #FF900E;
+}
+
+.love-and-enjoy > p{
+    line-height: 1.5;
+    margin: 2rem 0 3rem;
+}
+
+.feature-list{
+    width: 88%;
+    margin:0 auto;
+}
+
+.feature-list li{
+    margin-bottom: 4rem;
+}
+
+.feature-list h4{
+    font-size: 1.5rem;
+}
+
+.feature-list p{
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+
+
+
+
+/* footer style */
+footer{
+    grid-area:footer;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    .banner h1{
+        width: 80%;
+    }
+
+    .banner p{
+        width: 80%;
+    }
+
+    .love-and-enjoy{
+        width: 85%;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header nav{
+        flex-flow:column nowrap;
+    }
+
+    .architect-image{
+        width: 85%;
+        margin:0 auto;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    nav .nav-list{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .nav-list a{
+        margin-right:0;
+    }
+
+    .banner h1{
+        width: 100%;
+        font-size:2.2rem;
+    }
+
+    .banner p{
+        font-size: 1rem;
+    }
+
+    .img-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .love-and-enjoy h1{
+        font-size: 2rem;
+    }
+}
