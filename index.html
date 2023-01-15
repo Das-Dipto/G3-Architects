@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G3 Architects</title>
 
-    <!-- Below is the link of favicon. -->
-    <link rel="icon" type="image/x-icon" href="./images/icons/D8S.png">
+    <!-- Below is the link of favicon.
+    <link rel="icon" type="image/x-icon" href="./images/icons/D8S.png"> -->
     <!-- Below is the external css file link. -->
     <link rel="stylesheet" href="./style.css">
     <!-- Below is the font-awesome cdn. -->
@@ -15,6 +15,8 @@
 </head>
 <body>
     <div class="grid-container">
+
+        <!-- Below is the header section that holds nav and content-box section -->
         <header>
             <nav>
                 <h2>G3 Architects</h2>
@@ -37,6 +39,7 @@
             </section>
         </header>
 
+        <!-- Below is the main section that holds quick-list, features-you-enjoy, some-facts, milestone-projects, our-sponsors section -->
         <main>
             <sectiom class="quick-list">
                 <div class="img-grid">
@@ -78,11 +81,12 @@
                     </div>
                     <div class="architect-image">
                         <img src="./images/architect.png" alt="architect">
+                        <div class="overlay-button-container">
+                            <button class="button-class year-experience">10+ Year <span class="experience">Experience</span></button>
+                        </div>
                     </div>
                 </div>
-               <!-- <div class="overlay-button-container">
-                   <button class="button-class year-experience">10+ Year <span class="experience">Experience</span></button>
-               </div> -->
+               
             </section>
 
             <section class="some-facts">
@@ -90,22 +94,22 @@
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
 
                 <ul class="facts-list">
-                    <li class="facts">
+                    <li class="facts fact-1">
                         <img src="./images/icons/ribon.png">
                         <h4>54</h4>
                         <h6>Awards Winnings</h6>
                     </li>
-                    <li class="facts">
+                    <li class="facts fact-2">
                         <img src="./images/icons/projects.png">
                         <h4>1458</h4>
                         <h6>Project Finished</h6>
                     </li>
-                    <li class="facts">
+                    <li class="facts fact-3">
                         <img src="./images/icons/customers.png">
                         <h4>590</h4>
                         <h6>Clients Worked</h6>
                     </li>
-                    <li class="facts">
+                    <li class="facts fact-4">
                         <img src="./images/icons/email.png">
                         <h4>22578</h4>
                         <h6>Email Send</h6>
@@ -113,6 +117,7 @@
                 </ul>
             </section>
 
+            <!-- Below is bonus relevant section -->
             <section class="milestone-projects">
                 <h2>Milestone <span>Projects</span></h2>
                 <ul class="projects-list">
@@ -121,7 +126,6 @@
                         <h3>Vessel- Hudson Yards</h3>
                         <h4>Manhattan, NY</h4>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -138,8 +142,6 @@
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                             <h6>AA</h6>
                         </div>
@@ -151,8 +153,6 @@
                         <h3>MSG Sphere</h3>
                         <h4>Las Vegas, NV</h4>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
@@ -169,7 +169,6 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                             <h6>AAA</h6>
                         </div>
@@ -181,7 +180,6 @@
                         <h3>Universal Studios Hollywood</h3>
                         <h4>Los Angels, CA</h4>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -221,6 +219,8 @@
                 </ul>
             </section>
         </main>
+
+        <!-- Below is footer section -->
         <footer>
             <p>All rights reserved copyright@2023 startup landing page design</p>
         </footer>

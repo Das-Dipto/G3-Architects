@@ -17,6 +17,14 @@ a{
     text-decoration: none;
 }
 
+button{
+    transition: all 0.50s ease-out;
+}
+
+button:hover{
+    background-color: black;
+}
+
 /* grid-container style */
 .grid-container{
     display: grid;
@@ -53,12 +61,21 @@ nav h2{
     font-weight: 700;
 }
 
-.nav-list a{
+.nav-list a:link, .nav-list a:visited{
     font-size: 1.2rem;
     font-weight: 500;
     margin-right:4rem;
     line-height: 3;
     color: #454545;
+    transition: all 0.25s ease;
+}
+
+.nav-list a:hover{
+    color:#FF900E;
+}
+
+.nav-list a:active{
+    color: blue;
 }
 
 .nav-list .login{
@@ -183,6 +200,7 @@ main{
 
 .architect-image{
     flex-grow: 0.5;
+    position: relative;
 }
 
 .architect-image img{
@@ -190,21 +208,22 @@ main{
     object-fit: cover;
 }
 
-/* .overlay-button-container{
-    display: flex;
-    justify-content: center;
+.overlay-button-container{
+    position: absolute;
+    width: 100%;
+    bottom: -4rem;
+    left:-4rem;
+    z-index: 2;
 }
 
-.year-experience{
-    width: 15%;
+.year-experience{ 
     font-size: 2rem;
-    margin-top: -6rem;
-    z-index: 2;
+    width: 15rem;
 }
 
 .experience{
     font-size: 0.9rem;
-} */
+}
 
 .love-and-enjoy h1{
     font-size: 3rem;
@@ -238,7 +257,7 @@ main{
 /* main -> some-facts style */
 .some-facts{
     width: 85%;
-    margin:0 auto;
+    margin:10rem auto 0;
 }
 
 .some-facts h1{
@@ -292,6 +311,87 @@ main{
     text-align: center;
 }
 
+/* transition applied in fact-1 and fact-3 into some-facts section  */
+.fact-1, .fact-3{
+    position: relative;
+    top:0;
+    transition: all 0.20s ease-in-out;
+}
+
+.fact-1:hover, .fact-1:hover h6{
+    top:-2rem;
+    background-color: black;
+    color:white;
+    border:none;
+    border-radius:0px;
+}
+
+.fact-3:hover, .fact-3:hover h6{
+    border-radius: 50%;
+    background-color: black;
+    color:white;
+    border:none;
+}
+
+/* animation applied in fact-2 and fact-4 into some-facts section */
+@keyframes animation-one{
+    0%{
+        color:orangered;
+        border:1px solid white;
+    }
+
+    25%{
+        color:orangered;
+        border-top:1px solid orangered ;
+        border-right:1px solid white;
+        border-bottom:1px solid white;
+        border-left:1px solid white;
+    }
+
+    50%{
+        color:orange;
+        border-top: 1px solid white;
+        border-right:1px solid orange;
+        border-bottom:1px solid white;
+        border-left:1px solid white;
+    }
+
+    75%{
+        color: blue;
+        border-top: 1px solid white;
+        border-right:1px solid white;
+        border-bottom:1px solid blue;
+        border-left:1px solid white;
+    }
+
+    100%{
+        color: rgb(252, 14, 212);
+        border-top: 1px solid white;
+        border-right:1px solid white;
+        border-bottom:1px solid white;
+        border-left:1px solid rgb(252, 14, 212);
+    }
+}
+
+.fact-2:hover{
+    animation: animation-one 1.5s linear 0s infinite;
+}
+
+@keyframes animation-two{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.fact-4:hover{
+    animation: animation-two 1.5s linear 0s 2 alternate-reverse;
+}
+
+
 /* main -> milestone-projects style */
 .milestone-projects{
     width: 80%;
@@ -319,6 +419,11 @@ main{
     background-color: rgb(255, 254, 254);
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+.project:hover{
+    transform: scale(1.2);
 }
 
 .project img{
@@ -438,7 +543,22 @@ footer p{
 
     .love-and-enjoy{
         width: 85%;
-        margin: 0;
+        margin: 3rem 0 0 0;
+    }
+
+    .architect-image{
+        margin-bottom: 4rem;
+    }
+
+     .overlay-button-container{
+        display: flex;
+        justify-content: center;
+        bottom: -7rem;
+        left:0;
+    } 
+
+    .year-experience{
+       width: 12rem;
     }
 
     .some-facts h1{
@@ -464,6 +584,16 @@ footer p{
 @media only screen and (max-width: 768px) {
     header nav{
         flex-flow:column nowrap;
+        align-items: center;
+    }
+
+    nav .nav-list{
+        width: 80%;
+        justify-content: space-between;
+    }
+
+     .nav-list  a:link{
+        margin-right: 0;
     }
 
     .architect-image{
@@ -483,7 +613,7 @@ footer p{
         align-items: center;
     }
 
-    .nav-list a{
+    .nav-list a:link{
         margin-right:0;
     }
 
