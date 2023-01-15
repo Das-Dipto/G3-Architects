@@ -1,3 +1,9 @@
+/* <!-- ----------------------------------------------------------------------------
+*** The following codes produces anticipated output as figma file on screen size
+ greater than 1633px as well as equal to and less than 992 px ***
+----------------------------------------------------------------------------- --> */
+
+
 /* importing link from google fonts for 'Work Sans' font. */
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
@@ -182,12 +188,12 @@ main{
 /* main -> features-you-enjoy style */
 .features-you-enjoy{
     width: 88%;
-    margin:8rem auto 5rem;
+    margin:8rem auto;
 }
 
 .feature-container{
     display: flex;
-    flex-flow: row wrap-reverse;
+    flex-flow: row wrap;
     justify-content: center;
     gap:4rem;
 }
@@ -553,12 +559,16 @@ footer p{
      .overlay-button-container{
         display: flex;
         justify-content: center;
-        bottom: -7rem;
+        bottom: -14rem;
         left:0;
     } 
 
     .year-experience{
        width: 12rem;
+    }
+
+    .some-facts{
+        margin-top: 18rem;
     }
 
     .some-facts h1{
