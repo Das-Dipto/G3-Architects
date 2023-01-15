@@ -24,6 +24,7 @@ a{
           'header'
           'main'
           'footer';
+    padding-bottom: 10rem;
 }
 
 /* header style */
@@ -234,17 +235,117 @@ main{
     margin: 1rem 0;
 }
 
+/* main -> some-facts style */
+.some-facts{
+    width: 85%;
+    margin:0 auto;
+}
 
+.some-facts h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
 
+.some-facts p{
+    width: 40%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #727272;
+}
 
+.facts-list{
+    width: 90%;
+    margin:6rem auto 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap:5rem;
+}
+
+.facts{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding:1.5rem 2rem;
+    border-radius: 10px;
+    border: 1px solid #FF900E;
+}
+
+.facts img{
+    width: 40%;
+    object-fit: cover;
+}
+
+.facts h4{
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.facts h6{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #727272;
+    text-align: center;
+}
+
+/* main -> our-sponsors style */
+.our-sponsors{
+    width: 85%;
+    margin:10rem auto 0;
+}
+
+.our-sponsors h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+.our-sponsors p{
+    width: 40%;
+    margin: 1.5rem auto 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #727272;
+    text-align: center;
+}
+
+.sponsors{
+    margin: 4rem 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 4rem 8rem; 
+}
+
+.sponsors img{
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
 
 /* footer style */
 footer{
     grid-area:footer;
+    width: 80%;
+    margin: 8rem auto 0 ;
+    padding:1.5rem 0;
+    text-align: center;
+    background-color: #FFF4E7;
+}
+
+footer p{
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 
-
+/* Media query for large screen */
 @media only screen and (max-width: 992px) {
     .banner h1{
         width: 80%;
@@ -258,8 +359,23 @@ footer{
         width: 85%;
         margin: 0;
     }
+
+    .some-facts h1{
+        text-align: center;
+    }
+
+    .some-facts p{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .our-sponsors p{
+        width: 100%;
+    }
 }
 
+/* Media query for medium screen */
 @media only screen and (max-width: 768px) {
     header nav{
         flex-flow:column nowrap;
@@ -271,6 +387,7 @@ footer{
     }
 }
 
+/* Media query for small screen */
 @media only screen and (max-width: 576px) {
     nav .nav-list{
         flex-flow: column nowrap;
@@ -296,5 +413,19 @@ footer{
 
     .love-and-enjoy h1{
         font-size: 2rem;
+    }
+
+    .facts{
+        flex-grow: 0.65;
+    }
+
+    .sponsors{
+        flex-flow: column nowrap;
+        align-items: center; 
+        row-gap: 6rem;
+    }
+
+    .sponsors li{
+        width: 50%;
     }
 }
